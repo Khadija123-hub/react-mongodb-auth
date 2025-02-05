@@ -25,7 +25,7 @@ const Home = () => {
         setUser(response.data);
       } catch (err) {
         console.error("Erreur:", err);
-        localStorage.removeItem("token"); // Supprime le token en cas d'erreur
+        localStorage.removeItem("token"); 
         navigate("/");
       } finally {
         setLoading(false);

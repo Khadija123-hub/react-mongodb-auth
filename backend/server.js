@@ -3,7 +3,7 @@ const mongoose = require('mongoose');
 const authRoutes = require('./routes/authRoutes');
 const cors = require('cors');
 const connectDB = require('./config/db');
-require('dotenv').config(); // Assure-toi de charger les variables d'environnement
+require('dotenv').config();
 
 const app = express();
 
@@ -15,7 +15,7 @@ app.use(express.json());
 app.use(cors());
 
 // Routes
-app.use('/api/app_react_mongodb', authRoutes); // Assure-toi que ce fichier existe
+app.use('/api/app_react_mongodb', authRoutes); 
 
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => console.log(`Serveur démarré sur le port ${PORT}`));
